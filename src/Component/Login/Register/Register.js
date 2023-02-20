@@ -98,14 +98,14 @@ export default function Login() {
                 <div className="containerPassword">
                   <input
                     name="password"
-                    type="text"
-                    placeholder="Mật khẩu mới"
+                    type="password"
+                    placeholder="Mật khẩu"
                     onChange={handleChangeValue}
                   />
 
                   <input
                     name="rePassword"
-                    type="text"
+                    type="password"
                     placeholder="Nhập lại mật khẩu"
                     onChange={handleChangeValue}
                   />

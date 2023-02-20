@@ -39,15 +39,26 @@ export default function MyTicket() {
             <li className="seatTicket">Ghế ngồi</li>
             <li className="timeTicket">Thời gian</li>
           </ul>
-          {listTicket?.map((item) => {
+          {listTicket?.map((item, index) => {
             return (
-              <ul className="headerTb contentTicket">
+              <ul className="headerTb contentTicket" key={index}>
                 <li className="idTicket">{item.Id}</li>
                 <li className="nameTicket">{item.FilmName}</li>
                 <li className="nameTheater">{item.CinemaName}</li>
                 <li className="comboTicket">{item.Combo}</li>
                 <li className="seatTicket">{item.SeatCode}</li>
-                <li className="timeTicket">{item.ShowTime}</li>
+                <li className="timeTicket">
+                  <span className="giod">{`${item.ShowTime.substr(
+                    11,
+                    5
+                  )}`}</span>
+                  <span>
+                    {`${item.ShowTime.substr(8, 2)}/${item.ShowTime.substr(
+                      5,
+                      2
+                    )}/${item.ShowTime.substr(0, 4)}`}
+                  </span>
+                </li>
               </ul>
             );
           })}

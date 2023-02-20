@@ -105,14 +105,14 @@ export default function Login() {
                   <input
                     className="inputChange"
                     name="passwordOld"
-                    type="text"
+                    type="password"
                     placeholder="Mật khẩu cũ"
                     onChange={handleChangeValue}
                   />
                   <input
                     className="inputChange"
                     name="passwordNew"
-                    type="text"
+                    type="password"
                     placeholder="Mật khẩu mới"
                     onChange={handleChangeValue}
                   />
@@ -120,7 +120,7 @@ export default function Login() {
                   <input
                     className="inputChange"
                     name="rePasswordNew"
-                    type="text"
+                    type="password"
                     placeholder="Nhập lại mật khẩu"
                     onChange={handleChangeValue}
                   />

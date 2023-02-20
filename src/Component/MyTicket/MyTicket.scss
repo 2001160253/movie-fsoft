@@ -33,7 +33,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #47251c;
+      background-color: #f4a385;
       color: #ffffff;
       padding-left: 14px;
       .idTicket {
@@ -53,13 +53,21 @@
       }
       .timeTicket {
         width: 15%;
+        .giod::after {
+          content: "";
+          border-right: 1px solid #ae9e9e;
+          margin: 0 4px;
+        }
       }
     }
     .contentTicket {
       background-color: #fff;
       color: #000;
       margin-top: 10px;
-      // padding: 10px 0;
+      background-color: #f1ded7;
+
+      margin: 0;
+      border-bottom: 1px solid #ebc9bc;
       li {
         text-align: left;
       }
