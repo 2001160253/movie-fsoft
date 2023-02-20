@@ -77,8 +77,8 @@ export default function PayBankCard() {
         .imageLandscape,
       ImagePortrait: JSON.parse(localStorage.getItem("movieDetail"))
         .imageLandscape,
-      Combo: JSON.parse(localStorage.getItem("combo")).name,
-      SeatCode: JSON.parse(localStorage.getItem("seat")).name,
+      Combo: JSON.parse(localStorage.getItem("combo"))?.name,
+      SeatCode: JSON.parse(localStorage.getItem("seat"))?.name,
       ShowTime: `${y}-${m}-${dd}T${gio}Z`,
     }),
   };
