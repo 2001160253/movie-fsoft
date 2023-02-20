@@ -87,30 +87,6 @@ export default function PayBankCard() {
       "https://vietcpq.name.vn/U2FsdGVkX18VmUfb3R34rkA11q59f+dY6kr6oyXqCbg=/cinema/Ticket",
       options
     ).then((res) => {
-      console.log({
-        BankId: JSON.parse(BankId),
-        CardNumber: CardNumber,
-        CardName: CardName,
-        ExpireDate: ExpireDate,
-        CVV: CVV,
-        Price: JSON.parse(localStorage.getItem("price")),
-        ShowCode:
-          JSON.parse(localStorage.getItem("theater")).id +
-          JSON.parse(localStorage.getItem("movieDetail")).id,
-        Email: JSON.parse(localStorage.getItem("authentication")).Email,
-        CinemaName: JSON.parse(localStorage.getItem("theater")).name,
-        TheaterName: JSON.parse(localStorage.getItem("theater")).name,
-        FilmName: JSON.parse(localStorage.getItem("movieDetail")).name,
-
-        ImageLandscape: JSON.parse(localStorage.getItem("movieDetail"))
-          .imageLandscape,
-        ImagePortrait: JSON.parse(localStorage.getItem("movieDetail"))
-          .imageLandscape,
-        Combo: JSON.parse(localStorage.getItem("combo")).name,
-        SeatCode: JSON.parse(localStorage.getItem("seat")).name,
-        ShowTime: `${y}-${m}-${dd}T${gio}Z`,
-      });
-
       if (res.status == 200) {
         toast.success("Đặt vé thành công!");
         setTimeout(() => {
@@ -197,7 +173,9 @@ export default function PayBankCard() {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={handlePay}
+                onClick={() => {
+                  handlePay;
+                }}
               >
                 Thanh toán
               </button>
